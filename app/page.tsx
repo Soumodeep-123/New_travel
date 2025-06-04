@@ -10,7 +10,7 @@ import InteractiveMap from "@/components/interactive-map"
 import Footer from "@/components/footer"
 import Navbar from "@/components/navbar"
 import Hero from "@/components/hero-section"; // keep as is
-import BackgroundParallax from "@/components/background-parralx"; // new component
+//import BackgroundParallax from "@/components/background-parralx"; // new component
 
 // export default function HomePage() {
 //   return (
@@ -51,14 +51,8 @@ export default function HomePage() {
         <InteractiveMap />
         <Footer />
       </motion.main>
-      <Hero /> {/* Don't apply parallax to Hero */}
-      <BackgroundParallax>
-        {/* All other sections go here */}
-        {/* Example sections */}
-        <section className="h-screen">Section 1</section>
-        <section className="h-screen">Section 2</section>
-        <section className="h-screen">Section 3</section>
-      </BackgroundParallax>
+       {/* Don't apply parallax to Hero */}
+
     </div>
   )
 }
