@@ -14,7 +14,7 @@ export default function CarsPage() {
       vehicles: [
         {
           name: "Rolls-Royce Phantom",
-          image: "/placeholder.svg?height=300&width=500&text=Rolls+Royce+Phantom",
+          image: "https://maasacarrental.ae/wp-content/uploads/2024/08/Rent-Rolls-Royce-Phantom.jpeg",
           price: "$800/day",
           passengers: 4,
           features: ["Chauffeur Included", "Champagne Service", "Wi-Fi", "Premium Sound"],
@@ -22,7 +22,7 @@ export default function CarsPage() {
         },
         {
           name: "Bentley Mulsanne",
-          image: "/placeholder.svg?height=300&width=500&text=Bentley+Mulsanne",
+          image: "https://th.bing.com/th/id/OIP.ZJta-egUC3UYDWRiEVat7AHaEo?w=2560&h=1600&rs=1&pid=ImgDetMain",
           price: "$750/day",
           passengers: 4,
           features: ["Executive Seating", "Refrigerated Bar", "Massage Seats", "Privacy Glass"],
@@ -36,7 +36,7 @@ export default function CarsPage() {
       vehicles: [
         {
           name: "Lamborghini Huracán",
-          image: "/placeholder.svg?height=300&width=500&text=Lamborghini+Huracan",
+          image: "https://wallpapercave.com/uwp/uwp2127583.jpeg",
           price: "$1,200/day",
           passengers: 2,
           features: ["Track Mode", "Carbon Fiber Interior", "Sport Exhaust", "Launch Control"],
@@ -44,7 +44,7 @@ export default function CarsPage() {
         },
         {
           name: "Ferrari 488 GTB",
-          image: "/placeholder.svg?height=300&width=500&text=Ferrari+488+GTB",
+          image: "https://th.bing.com/th/id/OIP.TZT8_KbKkzl5cORUrJKSswHaEK?w=293&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
           price: "$1,500/day",
           passengers: 2,
           features: ["Race Mode", "Carbon Ceramic Brakes", "Alcantara Interior", "F1 Steering"],
@@ -58,7 +58,7 @@ export default function CarsPage() {
       vehicles: [
         {
           name: "Range Rover Autobiography",
-          image: "/placeholder.svg?height=300&width=500&text=Range+Rover+Autobiography",
+          image: "https://th.bing.com/th/id/OIP.mv7Z5makfaiL1r92jtHrYgHaEK?rs=1&pid=ImgDetMain",
           price: "$400/day",
           passengers: 7,
           features: ["All-Terrain", "Panoramic Roof", "Meridian Sound", "Air Suspension"],
@@ -66,7 +66,7 @@ export default function CarsPage() {
         },
         {
           name: "Mercedes G-Class AMG",
-          image: "/placeholder.svg?height=300&width=500&text=Mercedes+G+Class+AMG",
+          image: "https://th.bing.com/th/id/OIP.acP1H88q1c5bnwX4Gh7ypQHaEG?w=302&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
           price: "$600/day",
           passengers: 5,
           features: ["AMG Performance", "Off-Road Package", "Burmester Audio", "AMG Styling"],

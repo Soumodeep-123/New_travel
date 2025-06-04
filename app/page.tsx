@@ -9,7 +9,9 @@ import TestimonialsSlider from "@/components/testimonials-slider"
 import InteractiveMap from "@/components/interactive-map"
 import Footer from "@/components/footer"
 import Navbar from "@/components/navbar"
-import Hero from "@/components/hero-section"; // keep as is
+import SmoothScrollProvider from "@/components/smooth-scroll-provider"
+import Hero from "@/components/hero-section"; 
+// keep as is
 //import BackgroundParallax from "@/components/background-parralx"; // new component
 
 // export default function HomePage() {
@@ -35,7 +37,8 @@ export default function HomePage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 transition-colors duration-500">
+    <SmoothScrollProvider>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 transition-colors duration-500">
       <Navbar />
 
       <motion.main
@@ -54,5 +57,8 @@ export default function HomePage() {
        {/* Don't apply parallax to Hero */}
 
     </div>
+    </SmoothScrollProvider>
+    
+    
   )
 }
