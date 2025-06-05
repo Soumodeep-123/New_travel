@@ -5,6 +5,11 @@ import { Plane, Users, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
+import SmoothScrollProvider from "@/components/smooth-scroll-provider"
+import AnimatedBackground from "@/components/animated-background"
+import PlaneScene from "@/components/plane-scene"
+import Lottie from "lottie-react"
+//import clouds from "@/animations/clouds.json"
 
 export default function FlightsPage() {
   const flightOptions = [
@@ -41,7 +46,8 @@ export default function FlightsPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+    <SmoothScrollProvider>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
       <Navbar />
 
       <main className="pt-24">
@@ -49,22 +55,39 @@ export default function FlightsPage() {
         <section className="py-20 px-4 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10" />
           <div className="max-w-6xl mx-auto text-center relative z-10">
-            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-              <Plane className="w-16 h-16 text-amber-600 mx-auto mb-6" />
-              <h1 className="text-5xl md:text-6xl font-bold text-slate-800 dark:text-white mb-6">
-                Private Jet Charter
-              </h1>
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-8">
-                Experience the ultimate in luxury travel with our fleet of premium private jets. Fly on your schedule
-                with unparalleled comfort and service.
-              </p>
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white px-8 py-4 text-lg font-semibold rounded-2xl"
+          <div className="relative isolate z-10 w-full max-w-6xl mx-auto text-center py-20">
+              {/* 3D Plane Animation Behind */}
+              <PlaneScene />
+              
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="relative z-10"
               >
-                Book Your Flight
-              </Button>
-            </motion.div>
+
+                  <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+                            
+                            <Plane className="w-16 h-16 text-amber-600 mx-auto mb-6" />
+                            <h1 className="text-5xl md:text-6xl font-bold text-slate-800 dark:text-white mb-6">
+                              Private Jet Charter
+                            </h1>
+                            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-8">
+                              Experience the ultimate in luxury travel with our fleet of premium private jets. Fly on your schedule
+                              with unparalleled comfort and service.
+                            </p>
+                            <Button
+                              size="lg"
+                              className="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white px-8 py-4 text-lg font-semibold rounded-2xl"
+                            >
+                              Book Your Flight
+                            </Button>
+                    </motion.div>
+
+              </motion.div>
+
+          </div>
+            
           </div>
         </section>
 
@@ -158,5 +181,7 @@ export default function FlightsPage() {
 
       <Footer />
     </div>
+    </SmoothScrollProvider>
+    
   )
 }
